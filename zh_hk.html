@@ -1,0 +1,406 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Try</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#home">Your Name</a></div>
+            <input type="radio" name="slide" id="menu_btn">
+            <input type="radio" name="slide" id="cancel_btn">
+            <ul class="nav-links">
+                <label for="cancel_btn" class="btn cancel_btn"><i class="fas fa-times"></i></label>
+                <label for="showLanguages" class="mobile_item languages"><img src="images/globe_icon.png" class="globe_icon_mobile"></label>
+                <input type="checkbox" name="slide" id="showLanguages">
+                <div class="drop_language_mobile_container">
+                    <ul>
+                        <li>
+                            <a href="en.html" class="mobile_item">English</a>
+                        </li>
+                        <li>
+                            <a href="zh_hk.html" class="mobile_item">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+                <li>
+                    <a class="desktop_item globe_container"><img src="images/globe_icon.png" class="globe_icon"></i></a>
+                    <ul class="drop_languages">
+                        <li>
+                            <a href="en.html" class="desktop_item">English</a>
+                        </li>
+                        <li>
+                            <a href="zh_hk.html" class="desktop_item">Chinese</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#home" class="desktop_item">這是中文版面</a>
+                    <a href="#home" class="mobile_item" onclick="closeNav()">這是中文版面</a>
+                </li>
+                <li>
+                    <a href="#sets" class="desktop_item">Sets</a>
+                    <input type="checkbox" id="showSets">
+                    <label for="showSets" class="mobile_item sets">
+                        Sets
+                        <span class="fa fa-caret-right"></span>
+                    </label>
+                    <ul class="drop_sets">
+                        <li>
+                            <a href="#sets_breakfast" class="desktop_item">Breakfast</a>
+                            <a href="#sets_breakfast" class="mobile_item" onclick="closeNav()">Breakfast</a>
+                        </li>
+                        <li>
+                            <a href="#sets_lunch" class="desktop_item">Lunch</a>
+                            <a href="#sets_lunch" class="mobile_item" onclick="closeNav()">Lunch</a>
+                        </li>
+                        <li>
+                            <a href="#sets_tea" class="desktop_item">Tea</a>
+                            <a href="#sets_tea" class="mobile_item" onclick="closeNav()">Tea</a>
+                        </li>
+                        <li>
+                            <a href="#sets_dinner" class="desktop_item">Dinner</a>
+                            <a href="#sets_dinner" class="mobile_item" onclick="closeNav()">Dinner</a>
+                        </li>
+                        <li>
+                            <a href="#sets_alldaybreakfast" class="desktop_item">All-Day Breakfast</a>
+                            <a href="#sets_alldaybreakfast" class="mobile_item" onclick="closeNav()">All-Day Breakfast</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#food" class="desktop_item">Food</a>
+                    <input type="checkbox" id="showFood">
+                    <label for="showFood" class="mobile_item food">
+                        Food
+                        <span class="fa fa-caret-right"></span>
+                    </label>
+                    <ul class="drop_food">
+                        <li>
+                            <a href="#food_appetizer" class="desktop_item">Appetizer</a>
+                            <a href="#food_appetizer" class="mobile_item" onclick="closeNav()">Appetizer</a>
+                        </li>
+                        <li>
+                            <a href="#food_noodles" class="desktop_item">Noodles</a>
+                            <a href="#food_noodles" class="mobile_item" onclick="closeNav()">Noodles</a>
+                        </li>
+                        <li>
+                            <a href="#food_rice" class="desktop_item">Rice</a>
+                            <a href="#food_rice" class="mobile_item" onclick="closeNav()">Rice</a>
+                        </li>
+                        <li>
+                            <a href="#food_dessert" class="desktop_item">Dessert</a>
+                            <a href="#food_dessert" class="mobile_item" onclick="closeNav()">Dessert</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#beverages" class="desktop_item">Beverages</a>
+                    <input type="checkbox" id="showBeverages">
+                    <label for="showBeverages" class="mobile_item beverages">
+                        Beverages
+                        <span class="fa fa-caret-right"></span>
+                    </label>
+                    <ul class="drop_beverages">
+                        <li>
+                            <a href="#beverages_coffee" class="desktop_item">Coffee</a>
+                            <a href="#beverages_coffee" class="mobile_item" onclick="closeNav()">Coffee</a>
+                        </li>
+                        <li>
+                            <a href="#beverages_tea" class="desktop_item">Tea</a>
+                            <a href="#beverages_tea" class="mobile_item" onclick="closeNav()">Tea</a>
+                        </li>
+                        <li>
+                            <a href="#beverages_juice" class="desktop_item">Juice</a>
+                            <a href="#beverages_juice" class="mobile_item" onclick="closeNav()">Juice</a>
+                        </li>
+                        <li>
+                            <a href="#beverages_alcohol" class="desktop_item">Alcohol</a>
+                            <a href="#beverages_alcohol" class="mobile_item" onclick="closeNav()">Alcohol</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#member" class="desktop_item">Member</a>
+                    <a href="#member" class="mobile_item">Member</a>
+                </li>
+            </ul>
+            <label for="menu_btn" class="btn menu_btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    <div class="content">
+        <p class="paragraph_padding">
+            <h1 class="align-center" id="home">Your Name - A store full of touching stories</h1>
+            The perfect Hong Kong representation of relations between every citizens in the community, no matter who you are, where you live, we provide the best service and the best food for customer to enjoy.
+            <br><input type="checkbox" id="test1">1
+            <br><button id="testing1" onclick="checkUncheck(test1)">this is a button</button>
+            <br><input type="checkbox" id="test2">1
+            <br><button id="testing2" onclick="checkUncheck(test2)">this is a button</button>
+        </p>
+    </div>
+    <h1 class="align-center" id="sets">Sets</h1>
+    <div class="container" id="sets_breakfast">
+        <h2 class="align-center">Breakfast</h2>
+        <div class="products_container">
+
+            <div class="product" data-name="set_breakfast_1">
+                <img src="images/set_breakfast_1.png" alt="">
+                <h3>Deluxe Breakfast</h3>
+                <div class="price">$37.5</div>
+            </div>
+
+            <div class="product" data-name="set_breakfast_2">
+                <img src="images/set_breakfast_2.png" alt="">
+                <h3>Hotcakes Deluxe Breakfast</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_breakfast_3">
+                <img src="images/set_breakfast_3.png" alt="">
+                <h3>Jumbo Breakfast</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_breakfast_4">
+                <img src="images/set_breakfast_4.png" alt="">
+                <h3>Ham N' Cheese Burger</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_breakfast_5">
+                <img src="images/set_breakfast_5.png" alt="">
+                <h3>Egg McMuffin</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_breakfast_6">
+                <img src="images/set_breakfast_6.png" alt="">
+                <h3>Sausage McMuffin</h3>
+                <div class="price">$28</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="sets_lunch">
+        <h2 class="align-center">Lunch</h2>
+        <div class="products_container">
+
+            <div class="product" data-name="set_lunch_1">
+                <img src="images/set_lunch_1.png" alt="">
+                <h3>McNuggets (6/9 pcs)</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_lunch_2">
+                <img src="images/set_lunch_2.png" alt="">
+                <h3>McSpicy</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_lunch_3">
+                <img src="images/set_lunch_3.png" alt="">
+                <h3>McWings (4 pcs)</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_lunch_4">
+                <img src="images/set_lunch_4.png" alt="">
+                <h3>GCB</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_lunch_5">
+                <img src="images/set_lunch_5.png" alt="">
+                <h3>Filet-O-Fish</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_lunch_6">
+                <img src="images/set_lunch_6.png" alt="">
+                <h3>Big Mac</h3>
+                <div class="price">$28</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="sets_dinner">
+        <h2 class="align-center">Dinner</h2>
+        <div class="products_container">
+
+            <div class="product" data-name="set_dinner_1">
+                <img src="images/set_dinner_1.png" alt="">
+                <h3>Angus Original</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_dinner_2">
+                <img src="images/set_dinner_2.png" alt="">
+                <h3>Cheesy Champignon Angus Burger</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_dinner_3">
+                <img src="images/set_dinner_3.png" alt="">
+                <h3>Double Cheeseburger</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_dinner_4">
+                <img src="images/set_dinner_4.png" alt="">
+                <h3>GCB</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_dinner_5">
+                <img src="images/set_dinner_5.png" alt="">
+                <h3>Filet-O-Fish</h3>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="product" data-name="set_dinner_6">
+                <img src="images/set_dinner_6.png" alt="">
+                <h3>Big Mac</h3>
+                <div class="price">$28</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product_preview_set">
+        <div class="preview" data-target="set_breakfast_1">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_1.png" alt="">
+            <h2>Deluxe Breakfast</h2>
+            <p>Tender fried egg sided with crisp sausage and McMuffin buns, creating the absolute balance among every element of the breakfast.</p>
+            <div class="price">$37.50</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_breakfast_2">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_2.png" alt="">
+            <h2>Hotcakes Deluxe Breakfast</h2>
+            <p>Fluffy hotcakes sided with sausage, enhancing the sweet and salty flavour among the dish.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_breakfast_3">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_3.png" alt="">
+            <h2>Jumbo Breakfast</h2>
+            <p>Fluffy hotcakes sided with Deluxe Breakfast, integrating every flavour possible.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_breakfast_4">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_4.png" alt="">
+            <h2>Ham N' Cheese Burger</h2>
+            <p>Selected ham and a slice of cheese inserted into a fluffy bun.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_breakfast_5">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_5.png" alt="">
+            <h2>Egg McMuffin</h2>
+            <p>Crispy edged egg with a slice of ham inserted into a McMuffin bun.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_breakfast_6">
+            <i class="fas fa-times"></i>
+            <img src="images/set_breakfast_6.png" alt="">
+            <h2>Sausage McMuffin</h2>
+            <p>Tender sausage with a slice of cheese inserted into a McMuffin bun.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="preview" data-target="set_lunch_1">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_1.png" alt="">
+            <h2>Chicken McNuggets (6/9 pcs)</h2>
+            <p>Natually farmed chicken farmed in our own farm organically, flavourful Chicken Nuggets with crisp.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_lunch_2">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_2.png" alt="">
+            <h2>McSpicy Chicken Filet</h2>
+            <p>Crisp and hot chicken filet inserted with our custom made mayonaise sauce.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_lunch_3">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_3.png" alt="">
+            <h2>McWings (4 pcs)</h2>
+            <p>Natually farmed in our own farm organically, hot and flavourful chicken wings with crisp.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_lunch_4">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_4.png" alt="">
+            <h2>Grill Chicken Burger</h2>
+            <p>Sweet and flavourful grill juice spread on the pan fry chicken filet.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_lunch_5">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_5.png" alt="">
+            <h2>Filet-O-Fish</h2>
+            <p>Tender fish filet with a crisp skin fitted into a soft bun full of custom made mayonaise sauce.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+        <div class="preview" data-target="set_lunch_6">
+            <i class="fas fa-times"></i>
+            <img src="images/set_lunch_6.png" alt="">
+            <h2>Big Mac</h2>
+            <p>Double the size, double the surprise.</p>
+            <div class="price">$28.00</div>
+            <div class="buttons">
+                <a href="#" class="buy">Buy now</a>
+                <a href="#" class="cart">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
