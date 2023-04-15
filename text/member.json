@@ -1,0 +1,5 @@
+[{"MemberCode":1, "MemberID":"S0001", "MemberPassword":"1234", "BirthMonth":"March", "MemberPoints":0, "Coupon":0},
+ {"MemberCode":2, "MemberID":"S0002", "MemberPassword":"4321", "BirthMonth":"February", "MemberPoints":0, "Coupon":0},
+ {"MemberCode":3, "MemberID":"S0003", "MemberPassword":"2143", "BirthMonth":"June", "MemberPoints":0, "Coupon":0},
+ {"MemberCode":4, "MemberID":"S0004", "MemberPassword":"2431", "BirthMonth":"July", "MemberPoints":0, "Coupon":0},
+ {"MemberCode":5, "MemberID":"S0005", "MemberPassword":"3142", "BirthMonth":"January", "MemberPoints":0, "Coupon":0}]
