@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <!--
+      SEHH3140 Programming Project
+      Student Name (Student Number) Tutorial Class:
+      Yau Chi Kin (21119699A) 201A
+      Lau Yu Kwan (21075453A) 201B
+
+
+
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Programming Project</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_cart.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body onload="onloadCart()">
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="en.html">Your Name</a></div>
+        </div>
+    </nav>
+    <div class="cart_items_div">
+        <table class="cart_table">
+            <tr>
+                <th>Product</th>
+                <th></th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </table>
+    </div>
+    <div class="cart_summary_div">
+        <table>
+            <tr>
+                <td></td>
+                <td>Promo Code</td>
+                <td>
+                    <input type="text" class="promo_code_input">
+                    <button class="promo_code_btn" onclick="checkPromoCode()">Enter</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Subtotal</td>
+                <td class="subtotal">$0.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Discount</td>
+                <td class="discount">$0.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td class="total">$0.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Member ID</td>
+                <td class="cart_member_id">Not signed in</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="en.html">Back To Menu</a>
+                </td>
+                <td>
+                    <button class="check_out_btn" onclick="checkOut()">Check Out</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="js/script_cart.js"></script>
+    <script type="text/javascript" src="js/script_checkout.js"></script>
+</body>
+
+</html>

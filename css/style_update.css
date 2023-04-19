@@ -1,0 +1,14 @@
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+div.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    position: absolute;
+    right: 3rem;
+}
