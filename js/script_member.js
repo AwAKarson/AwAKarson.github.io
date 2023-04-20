@@ -1,5 +1,6 @@
 getMemberJSON = JSON.parse(localStorage.getItem("memberJSON"))
 getRecordsJSON = JSON.parse(localStorage.getItem("recordsJSON"))
+console.log(getMemberJSON)
 
 targetUserID = ""
 targetUserRow = 0
