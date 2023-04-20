@@ -7,7 +7,7 @@ currentMember = localStorage.getItem("currentMember")
 targetMemberRow = 0
 countMemberRow = 0
 for (const member in getMemberJSON) {
-    if (getMemberJSON[member] == currentMember) {
+    if (getMemberJSON[member].MemberID == currentMember) {
         targetMemberRow = countMemberRow
     }
     countMemberRow++
