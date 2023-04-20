@@ -28,11 +28,4 @@ fetch('../text/records.json')
     .then(function(data) {
         localStorage.setItem("recordsJSON", JSON.stringify(data))
     })
-localStorage.setItem("currentMember", "")
-
-console.log(JSON.parse(localStorage.getItem("drinksJSON")))
-console.log(JSON.parse(localStorage.getItem("promoJSON")))            
-console.log(JSON.parse(localStorage.getItem("memberJSON")))
-console.log(JSON.parse(localStorage.getItem("foodJSON")))            
-console.log(JSON.parse(localStorage.getItem("ingredientsJSON")))
-console.log(JSON.parse(localStorage.getItem("recordsJSON")))         
+localStorage.setItem("currentMember", "")       
