@@ -1,0 +1,58 @@
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+div.main {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.display {
+    display: none;
+}
+
+div.main button, div.main p {
+    padding: 5px;
+    margin-right: 1rem;
+}
+
+.display {
+    position: absolute;
+    right: 3rem;
+}
+
+
+.member_login {
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_panel {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 50vh;
+    border: 2px solid #242526;
+    border-radius: 5px;
+    gap: 1rem;
+}
+.login_panel div {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.login_panel h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+.login_confirm {
+    flex-direction: row;
+    justify-content: right;
+}
+.login_panel button {
+    width: 4rem;
+}

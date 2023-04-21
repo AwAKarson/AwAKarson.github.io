@@ -1,0 +1,6 @@
+[{"MemberID":"S0001", "Record":2, "Img":"images/chicken_burger.png", "Price":65, "Date":"19/02/2023", "Time":"11:15"},
+ {"MemberID":"S0001", "Record":1, "Img":"images/mos_burger.png", "Price":35, "Date":"24/02/2023", "Time":"13:21"},
+ {"MemberID":"S0001", "Record":1, "Img":"images/fries_l.png", "Price":42, "Date":"28/02/2023", "Time":"13:07"},
+ {"MemberID":"S0001", "Record":3, "Img":"images/seafood_rice_burger.png", "Price":124, "Date":"21/03/2023", "Time":"12:35"},
+ {"MemberID":"S0002", "Record":1, "Img":"images/mos_burger.png", "Price":51, "Date":"22/03/2023", "Time":"14:32"},
+ {"MemberID":"S0001", "Record":1, "Img":"images/chicken_burger.png", "Price":30, "Date":"19/03/2023", "Time":"16:51"}]
