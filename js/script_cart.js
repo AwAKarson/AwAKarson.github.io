@@ -3,7 +3,7 @@ MemberID = [], MemberPassword = [], BirthMonth = [], MemberPoints = [], Coupon =
 FoodID = [], FoodName = [], FoodCategory = [], IngredientsID = [], Ingredients = [],
 Quantity = []
 
-data = JSON.parse(localStorage.getItem("ingredientsJSON"))
+data = JSON.parse(localStorage.getItem("promoJSON"))
 for (let rows = 0; rows < data.length; rows++) {
     PromoCode[rows] = data[rows].PromoCode
     Discount[rows] = data[rows].Discount
