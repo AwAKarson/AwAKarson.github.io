@@ -4,8 +4,14 @@ div {
 }
 
 div.main {
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+div.main button, div.main p {
+    padding: 5px;
+    margin-right: 1rem;
 }
 
 .display {
