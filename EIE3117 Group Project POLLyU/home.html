@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLLyU</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+            height: 100vh; /* Full viewport height */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8vh; /* 8% of viewport height */
+            background-color: #9E2335;
+            display: flex;
+            align-items: center; /* Center vertically */
+            color: white;
+        }
+        .nav-button.left {
+            margin-left: 5px; /* 5px margin for left button */
+            margin-right: auto; /* Push to the left */
+        }
+        .nav-button.right {
+            margin-right: 5px; /* 5px margin for right button */
+        }
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center horizontally */
+            flex-grow: 1; /* Allow this to grow to fill space */
+        }
+        .navbar img {
+            height: 3rem; /* Adjust based on preference */
+            margin-right: 10px; /* Space between image and text */
+        }
+        h3 {
+            margin: 0; /* Remove default margin */
+            font-size: 3rem;
+            color: white; /* Ensure text is white */
+        }
+        .nav-button {
+            margin: 2em 2em; /* 5px margin for buttons */
+            padding: 10px 20px; /* Padding for button */
+            border: 2px solid white; /* White border */
+            border-radius: 25px; /* Rounded border */
+            background: transparent; /* No background */
+            color: white; /* White text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background 0.3s; /* Smooth transition */
+            font-size: 2em;
+        }
+        .button:hover {
+            background: rgba(255, 255, 255, 0.2); /* Light background on hover */
+        }
+        .content-box {
+            width: 60%; /* 60% of the page width */
+            background-color: white; /* White background */
+            border: 5px solid #9E2335; /* 5px border with navbar color */
+            border-radius: 15px; /* Rounded border */
+            padding: 20px; /* Padding inside the box */
+            margin: 10vh 0vh; /* Space below the navbar */
+            flex-grow: 1; /* Take up remaining height */
+            color: black; /* Text color for visibility */
+            text-align: center; /* Center text */
+        }
+        .flex-container {
+            display: flex;
+            background-color: aliceblue;
+        }
+        .flex-container.row {
+            flex-direction: row;
+            border-radius: 1em;
+            height: 10em;
+            margin: 1em 0;
+        }
+        .flex-container.column {
+            flex-direction: column;
+        }
+        .flex-container.wide {
+            flex-grow: 2;
+            align-items: start;
+        }
+        .flex-container > div {
+            margin: 10px;
+            text-align: center;
+            line-height: 2em;
+            font-size: 30px;
+            flex-grow: 1;
+            display: flex; /* Add this line */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+        .flex-container > button {
+            margin: 10px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex; /* Add this line */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+        .overflow-div {
+            overflow: scroll;
+            max-height: 68vh;
+        }
+        .list-button {
+            padding: 10px 20px; /* Padding for button */
+            border: 2px solid #9E2335; /* White border */
+            border-radius: 15px; /* Rounded border */
+            background: transparent; /* No background */
+            color: #9E2335; /* White text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background 0.3s; /* Smooth transition */
+            font-size: 0.5em;
+        }
+        @media (max-width: 600px) {
+            .navbar img {
+                height: 50%; /* Adjust image size for smaller screens */
+            }
+            .button {
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+            .content-box {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <button class="nav-button left" onclick="toMyPollPage()">my poll</button>
+        <div class="center-container" onclick="toHomePage()">
+            <img src="images/POLLyU_nav.jpg">
+            <h3>POLLyU</h3>
+        </div>
+        <button class="nav-button right" onclick="toCreatePage()">create poll</button>
+    </div>
+
+    <div class="content-box">
+        <h2>List of available POLL</h2>
+        <div class="overflow-div">
+            <div class="flex-container row">
+                <div>POLL 01</div>
+                <div class="flex-container column wide">
+                    <div>POLLer: Apple</div>
+                    <div>Title: Is it good to drink?</div>
+                </div>
+                <div class="flex-container column">
+                    <button class="list-button vote" onclick="toVotePage()">Vote</button>
+                    <button class="list-button view" onclick="toDetailPage()">View</button>
+                </div>  
+            </div>
+            <div class="flex-container row">
+                <div>POLL 02</div>
+                <div class="flex-container column wide">
+                    <div>POLLer: Apple</div>
+                    <div>Title: Is it good to drink?</div>
+                </div>
+                <div class="flex-container column">
+                    <button class="list-button vote" onclick="toVotePage()">Vote</button>
+                    <button class="list-button view" onclick="toDetailPage()">View</button>
+                </div>  
+            </div>
+            <div class="flex-container row">
+                <div>POLL 03</div>
+                <div class="flex-container column wide">
+                    <div>POLLer: Apple</div>
+                    <div>Title: Is it good to drink?</div>
+                </div>
+                <div class="flex-container column">
+                    <button class="list-button vote" onclick="toVotePage()">Vote</button>
+                    <button class="list-button view" onclick="toDetailPage()">View</button>
+                </div>  
+            </div>
+            <div class="flex-container row">
+                <div>POLL 04</div>
+                <div class="flex-container column wide">
+                    <div>POLLer: Apple</div>
+                    <div>Title: Is it good to drink?</div>
+                </div>
+                <div class="flex-container column">
+                    <button class="list-button vote" onclick="toVotePage()">Vote</button>
+                    <button class="list-button view" onclick="toDetailPage()">View</button>
+                </div>  
+            </div>
+            <div class="flex-container row">
+                <div>POLL 05</div>
+                <div class="flex-container column wide">
+                    <div>POLLer: Apple</div>
+                    <div>Title: Is it good to drink?</div>
+                </div>
+                <div class="flex-container column">
+                    <button class="list-button vote" onclick="toVotePage()">Vote</button>
+                    <button class="list-button view" onclick="toDetailPage()">View</button>
+                </div>  
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="js/nav_script.js"></script>
+
+</html>

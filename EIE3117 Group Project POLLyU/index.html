@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+        font-family: Helvetica, sans-serif;
+    }
+    
+    .header {
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .header h1 {
+        font-size: 32px;
+        color: #8F2E37;
+        padding: 0px 10px;
+    }
+    .header img {
+        height: 40px;
+        align-self: center;
+        padding: 0px 10px;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="number" i], select {
+        width: 55%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #9E2335;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .register-section, .login-section {
+        display: none;
+    }
+
+    .toggle-section {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .toggle-section a {
+        color: #9E2335;
+        text-decoration: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .register-table, .login-table {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+    }
+    .front-star::first-letter {
+        color: #FF5555;
+    }
+    .two-item-td {
+        display: flex;
+        flex-direction: row;
+    }
+    .two-item-td input {
+        margin-right: 10px;
+    }
+    table tr td:first-child {
+        min-width: 150px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <img src="images/POLLyU.jpg">
+        <h1>POLLyU</h1>
+    </div>
+    <div class="toggle-section">
+        <a href="#" id="login-link">Login</a> |
+        <a href="#" id="register-link">Register</a>
+    </div>
+    <div id="register-section" class="register-section">
+        <h2>Register</h2>
+        <form id="register-form" method="POST">
+            <table id="register-table">
+                <tr>
+                    <td>
+                    <label for="register-id">Login ID:</label>
+                    </td>
+                    <td>
+                    <input type="text" id="register-id" pattern="[a-zA-Z0-9]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label for="register-nickname">Nickname:</label>
+                    </td>
+                    <td>
+                    <input type="text" id="register-nickname" pattern="[a-zA-Z0-9]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="front-star">&#x2605 Password must be 8-12 characters, containing upper and lower case characters and numbers</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="register-password" class="back-star">Password &#x2605:</label>
+                    </td>
+                    <td class="two-item-td">
+                        <input type="password" id="register-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$" required>
+                        <button type="button" id="register-show-password">Show</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="register-confirm-password" class="back-star">Confirm Password &#x2605:</label>
+                    </td>
+                    <td class="two-item-td">
+                        <input type="password" id="register-confirm-password" required>
+                        <button type="button" id="register-show-confirm-password">Show</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label for="register-email">Email:</label>
+                    </td>
+                    <td>
+                    <input type="email" id="register-email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label for="register-profile-image">Profile Image:</label>
+                    </td>
+                    <td>
+                    <input type="file" id="register-profile-image" accept="image/*">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
+    <div id="login-section" class="login-section">
+        <h2>Login</h2>
+        <form id="login-form" method="POST">
+            <table class="login-table">
+            <tr>
+                <td>
+                <label for="login-id">Login ID:</label>
+                </td>
+                <td>
+                <input type="text" id="login-id" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label for="login-password">Password:</label>
+                </td>
+                <td class="two-item-td">
+                <input type="password" id="login-password" required>
+                <button type="button" id="login-show-password">Show</button>
+                </td>
+            </tr>
+            </table>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('register-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('register-section').style.display = 'block';
+        document.getElementById('login-section').style.display = 'none';
+    });
+
+    document.getElementById('login-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('register-section').style.display = 'none';
+        document.getElementById('login-section').style.display = 'block';
+    });
+  </script>
+  <script src="js/nav_script.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
